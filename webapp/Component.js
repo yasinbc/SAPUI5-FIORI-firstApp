@@ -1,8 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"CEMOSA/ZYBC_probando/model/models",
-	'sap/m/Text' //walkthrough
+	"CEMOSA/ZYBC_probando/model/models"
 ], function (UIComponent, Device, models) {
 	"use strict";
 	return UIComponent.extend("CEMOSA.ZYBC_probando.Component", {
