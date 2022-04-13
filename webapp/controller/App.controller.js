@@ -1,14 +1,14 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/m/MessageToast",
-	"sap/ui/model/json/JSONModel",
-	"sap/ui/model/resource/ResourceModel"
-], function (Controller, MessageToast, JSONModel, ResourceModel) {
+	// "sap/ui/model/json/JSONModel",
+	// "sap/ui/model/resource/ResourceModel"
+], function (Controller, MessageToast /*, JSONModel, ResourceModel*/ ) {
 	"use strict";
 
 	//Aqui yace la logica de la web
 	return Controller.extend("CEMOSA.ZYBC_probando.controller.App", {
-		onInit: function () {
+		/*onInit: function () {
 			var oData = {
 				recipient: {
 					name: "World"
@@ -23,9 +23,9 @@ sap.ui.define([
 				bundleName: "CEMOSA.ZYBC_probando.i18n.i18n"
 			});
 			this.getView().setModel(i18nModel, "i18n");
-		},
+		},                   */
 		onShowHello: function () {
-			//read msg (message) from i18n model fixed
+			//read msg (message) from i18n model
 			var oBundle = this.getView().getModel("i18n").getResourceBundle();
 			var sRecipient = this.getView().getModel().getProperty("/recipient/name");
 			var sMsg = oBundle.getText("helloMsg", [sRecipient]);
