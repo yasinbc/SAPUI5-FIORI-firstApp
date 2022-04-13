@@ -25,7 +25,7 @@ sap.ui.define([
 			this.getView().setModel(i18nModel, "i18n");
 		},
 		onShowHello: function () {
-			//read msg (message) from i18n model
+			//read msg (message) from i18n model fixed
 			var oBundle = this.getView().getModel("i18n").getResourceBundle();
 			var sRecipient = this.getView().getModel().getProperty("/recipient/name");
 			var sMsg = oBundle.getText("helloMsg", [sRecipient]);
