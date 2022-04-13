@@ -1,0 +1,38 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZGW_CEMOSA_01_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="BP" sap:content-version="1">
+				<Key><PropertyRef Name="IdInterlocutor"/></Key><Property Name="IdInterlocutor" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Numero de interlocutor"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Tipo" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Tipo de interlocutor"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Nombre del interlocutor"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cif" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="CIF / NIF" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Borrado" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Marcado para borrado"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="BPToBPDireccionNav" Relationship="ZGW_CEMOSA_01_SRV.BPToBPDireccionAss" FromRole="FromRole_BPToBPDireccionAss"
+					ToRole="ToRole_BPToBPDireccionAss"/></EntityType>
+			<EntityType Name="BPDireccion" sap:content-version="1">
+				<Key><PropertyRef Name="IdInterlocutor"/><PropertyRef Name="TipoDir"/><PropertyRef Name="Contador"/></Key><Property Name="IdInterlocutor" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Numero de interlocutor"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="TipoDir" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Tipo de direccion"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Contador" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Contador" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Via" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Nombre de la via"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Numero" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Numero de la via"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CodigoPostal" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Codigo postal"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Poblacion" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Poblacion" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Provincia" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Provincia" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Pais" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Pais" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Principal" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Principal" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<Association Name="BPToBPDireccionAss" sap:content-version="1"><End Type="ZGW_CEMOSA_01_SRV.BP" Multiplicity="1" Role="FromRole_BPToBPDireccionAss"/><End Type="ZGW_CEMOSA_01_SRV.BPDireccion" Multiplicity="*" Role="ToRole_BPToBPDireccionAss"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_BPToBPDireccionAss"><PropertyRef Name="IdInterlocutor"/></Principal>
+					<Dependent Role="ToRole_BPToBPDireccionAss"><PropertyRef Name="IdInterlocutor"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="ZGW_CEMOSA_01_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="BPSet" EntityType="ZGW_CEMOSA_01_SRV.BP" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="BPDireccionSet" EntityType="ZGW_CEMOSA_01_SRV.BPDireccion" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<AssociationSet Name="BPToBPDireccionAssSet" Association="ZGW_CEMOSA_01_SRV.BPToBPDireccionAss" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"><End EntitySet="BPSet" Role="FromRole_BPToBPDireccionAss"/><End EntitySet="BPDireccionSet" Role="ToRole_BPToBPDireccionAss"/></AssociationSet>
+			</EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZGW_CEMOSA_01_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZGW_CEMOSA_01_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
