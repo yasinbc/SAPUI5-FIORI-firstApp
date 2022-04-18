@@ -4,14 +4,15 @@
 			<pages>
 				<Page id="page" title="{i18n>homePageTitle}">
 					<content>
-						<Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto">
-							<Button 
-								text="{i18n>showHelloButtonText}" 
-								press=".onShowHello"
-								class="myCustomButton"/>
-							<Input value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%"/>
-							<Text text="Hello {/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
-						</Panel>
+						<!--<Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto">-->
+						<!--	<Button -->
+						<!--		text="{i18n>showHelloButtonText}" -->
+						<!--		press=".onShowHello"-->
+						<!--		class="myCustomButton"/>-->
+						<!--	<Input value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%"/>-->
+						<!--	<Text text="Hello {/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>-->
+						<!--</Panel>-->
+							<mvc:XMLView viewName="CEMOSA.ZYBC_probando.view.HelloPanel"/> 
 					</content>
 				</Page>
 			</pages>
