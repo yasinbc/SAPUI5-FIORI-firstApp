@@ -4,10 +4,10 @@
 			<pages>
 				<Page id="page" title="{i18n>homePageTitle}">
 					<content>
-						<Panel headerText="{i18n>helloPanelTitle}">
+						<Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto">
 							<Button text="{i18n>showHelloButtonText}" press=".onShowHello"/>
 							<Input value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%"/>
-							<Text class="hC" text="Testing CSS3"/>
+							<Text text="Hello {/recipient/name}" class="sapUiSmallMargin"/>
 						</Panel>
 					</content>
 				</Page>
