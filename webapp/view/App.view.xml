@@ -13,6 +13,7 @@
 						<!--	<Text text="Hello {/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>-->
 						<!--</Panel>-->
 							<mvc:XMLView viewName="CEMOSA.ZYBC_probando.view.HelloPanel"/> 
+							<mvc:XMLView viewName="CEMOSA.ZYBC_probando.view.InvoiceList"/>
 					</content>
 				</Page>
 			</pages>
