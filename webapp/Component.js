@@ -38,7 +38,6 @@ sap.ui.define([
 			this.setModel(oModel);
 
 			//set i18n model
-			console.log("sometimes")
 			var i18nModel = new ResourceModel({
 				bundleName: "CEMOSA.ZYBC_probando.i18n.i18n"
 			});

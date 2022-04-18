@@ -5,7 +5,7 @@
 				<Page id="page" title="{i18n>title}">
 					<Button text="{i18n>showHelloButtonText}" press=".onShowHello"/>
 					<Input value="{/recipient/name}" description="Hello {/recipient/name}" valueLiveUpdate="true" width="60%"/>
-					<Text class="hC" text="CEMOSA testing CSS3"/>
+					<Text class="hC" text="Testing CSS3"/>
 				</Page>
 			</pages>
 		</App>
