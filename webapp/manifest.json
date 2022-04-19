@@ -20,6 +20,13 @@
 				"settings": {
 					"localUri": "localService/metadata.xml"
 				}
+			},
+			"invoiceRemote": {
+				"uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
 			}
 		}
 	},
@@ -47,10 +54,6 @@
 			"async": true,
 			"id": "App"
 		},
-		"invoice": {
-			"type": "sap.ui.model.json.JSONModel",
-			"uri": "Invoices.json"
-		},
 		"dependencies": {
 			"minUI5Version": "1.65.6",
 			"libs": {
@@ -69,6 +72,11 @@
 				"settings": {
 					"bundleName": "CEMOSA.ZYBC_probando.i18n.i18n"
 				}
+			},
+			"invoice": {
+				"dataSource": "invoiceRemote",
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "Invoices.json"
 			},
 			"": {
 				"type": "sap.ui.model.odata.v2.ODataModel",
