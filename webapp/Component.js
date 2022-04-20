@@ -1,21 +1,13 @@
 sap.ui.define([
-	"sap/ui/core/UIComponent", //Step 9 Walkthrough
+	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
 	"CEMOSA/ZYBC_probando/model/models",
-	"sap/ui/model/json/JSONModel", //Step 9 Walkthrough
-	"sap/ui/model/resource/ResourceModel" //Step 9 Walkthrough
-], function (UIComponent, Device, models, JSONModel, ResourceModel) {
+	'sap/m/Text' //walkthrough
+], function (UIComponent, Device, models) {
 	"use strict";
 	return UIComponent.extend("CEMOSA.ZYBC_probando.Component", {
 
 		metadata: {
-			//Step 9 Walkthrough
-			"interfaces": [sap.ui.core.IAsyncContentCreation],
-			"rootView": "CEMOSA.ZYBC_probando.view.App",
-			"type": "XML",
-			/*"async": true, // implicitly set via the sap.ui.core.IAsyncContentCreation interface*/
-			"id": "app",
-
 			manifest: "json"
 		},
 
@@ -26,22 +18,7 @@ sap.ui.define([
 		 */
 		init: function () {
 			// call the base component's init function
-			UIComponent.prototype.init.apply(this, arguments); //Step 9 Walkthrough
-			//set data model
-			var oData = {
-				recipient: {
-					name: "World"
-				}
-			};
-
-			var oModel = new JSONModel(oData);
-			this.setModel(oModel);
-
-			//set i18n model
-			var i18nModel = new ResourceModel({
-				bundleName: "CEMOSA.ZYBC_probando.i18n.i18n"
-			});
-			this.setModel(i18nModel, "i18n");
+			UIComponent.prototype.init.apply(this, arguments);
 
 			// enable routing
 			this.getRouter().initialize();
