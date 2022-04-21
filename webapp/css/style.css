@@ -1,22 +1,31 @@
 html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
-    margin-right: 0.125rem;
-}
-
-html[dir="rtl"] .myAppDemonWT .myCustomButton.sapMBtn {
-    margin-left: 0.125rem;
-}
-
-.myAppDemoWT .myCustomText {
+    margin-right: 0.125rem
+ }
+ 
+ html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
+    margin-left: 0.125rem
+ }
+ 
+ .myAppDemoWT .myCustomText {
     display: inline-block;
     font-weight: bold;
-}
-
-
-/* Enter your custom styles here */
-/*.hC {*/
-/*    color: red;*/
-/*    display: block;*/
-/*    margin: 8px;*/
-/*    border: 1px solid black;*/
-/*    border-radius: 5px;*/
-/*}*/
+ }
+ 
+ 
+ /*  ProductRating */
+ .myAppDemoWTProductRating {
+     padding: 0.75rem;
+ }
+ .myAppDemoWTProductRating .sapMRI {
+     vertical-align: initial;
+ }
+ 
+ 
+ /* Enter your custom styles here */
+ /*.hC {*/
+ /*    color: red;*/
+ /*    display: block;*/
+ /*    margin: 8px;*/
+ /*    border: 1px solid black;*/
+ /*    border-radius: 5px;*/
+ /*}*/
