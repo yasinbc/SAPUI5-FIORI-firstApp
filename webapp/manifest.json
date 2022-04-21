@@ -99,29 +99,32 @@
 		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",
+				"type": "View",
 				"viewType": "XML",
-				"async": true,
-				"viewPath": "CEMOSA.ZYBC_probando.view",
-				"controlAggregation": "pages",
+				"path": "CEMOSA.ZYBC_probando.view",
 				"controlId": "app",
-				"clearControlAggregation": false
+				"controlAggregation": "pages"
 			},
 			"routes": [
 				{
-					"name": "RouteApp",
-					"pattern": "RouteApp",
-					"target": [
-						"TargetApp"
-					]
+				  "pattern": "",
+				  "name": "overview",
+				  "target": "overview"
+				},
+				{
+				  "pattern": "detail",
+				  "name": "detail",
+				  "target": "detail"
 				}
-			],
+	  ],
 			"targets": {
-				"TargetApp": {
-					"viewType": "XML",
-					"transition": "slide",
-					"clearControlAggregation": false,
-					"viewId": "App",
-					"viewName": "App"
+				"overview": {
+				  "id": "overview",
+				  "viewName": "Overview"
+				},
+				"detail": {
+				  "id": "detail",
+				  "viewName": "Detail"
 				}
 			}
 		}
