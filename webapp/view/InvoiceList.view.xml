@@ -76,7 +76,6 @@
 </mvc:View>
 
 
-
 <!--<mvc:View controllerName="CEMOSA.ZYBC_probando.controller.InvoiceList" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">-->
 <!--	<List -->
 <!--		id="invoiceList" -->
