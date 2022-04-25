@@ -1,40 +1,12 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	// "sap/m/MessageToast",
-	// "sap/ui/model/json/JSONModel",
-	// "sap/ui/model/resource/ResourceModel"
-], function (Controller, MessageToast /*, JSONModel, ResourceModel*/ ) {
+], function (Controller) {
 	"use strict";
 
 	//Aqui yace la logica de la web
 	return Controller.extend("CEMOSA.ZYBC_probando.controller.App", {
-		/*onInit: function () {
-			var oData = {
-				recipient: {
-					name: "World"
-				}
-			};
-
-			var oModel = new JSONModel(oData);
-			this.getView().setModel(oModel);
-			// debugger;
-			//set i18n model on view
-			var i18nModel = new ResourceModel({
-				bundleName: "CEMOSA.ZYBC_probando.i18n.i18n"
-			});
-			this.getView().setModel(i18nModel, "i18n");
-		},                   */
-		// onShowHello: function () {
-		// 	//read msg (message) from i18n model
-		// 	var oBundle = this.getView().getModel("i18n").getResourceBundle();
-		// 	var sRecipient = this.getView().getModel().getProperty("/recipient/name");
-		// 	var sMsg = oBundle.getText("helloMsg", [sRecipient]);
-
-		// 	//show message
-		// 	MessageToast.show(sMsg);
-
-		// 	//alert("texto") embellecido a pie de pagina y centrado
-		// 	// MessageToast.show("esto es un alert() en SAPUI5")
-		// }
+		onInit: function () {
+			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+		}
 	});
 });
